@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o meu amorzinho</title>
+    <link rel="shortcut icon" href="love.png" type="image/x-icon">
+    <style>
+        body{
+            background-color: rgb(53, 51, 51);
+        }
+
+        .painel {
+            margin: auto;
+            background-color: white;
+            border-radius: 20px;
+            width: 500px;
+            height: 800px;
+            text-align: center;
+            padding-top: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #sim{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border-radius: 12px;
+            color: white;
+            text-size-adjust: 14px;
+            border: 2px solid rgb(207, 41, 41);
+            margin-left: -10px;
+            cursor: pointer;
+
+        }
+
+        #nao{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border-radius: 12px;
+            color: white;
+            text-size-adjust: 14px;
+            border: 2px solid rgb(204, 41, 41);
+            margin-left: 70px;
+            cursor: pointer;
+        
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="painel">
+            <h1>Recado para você!</h1>
+
+            <img src="https://media1.tenor.com/m/Azdp9h0j46QAAAAC/peach-goma-peach-goma-love.gif" alt="">            
+           
+            <h3>Deseja receber esta mensagem?</h3>
+            <button onmouseover="fuja()" id="sim" ><b>Sim!</b></button>
+            <a href="aula04/ex001.html"><button id="nao"><b>Não.</b></button></a>
+            
+            <script>
+                function fuja(){
+                    var botaosim = document.getElementById("sim")
+
+                    var larguraJanela = window.innerWidth;
+                    var alturaJanela = window.innerHeight;
+                    
+                    var maxX = larguraJanela - botaosim.offsetWidth;
+                    var maxY = alturaJanela - botaosim.offsetHeigth;
+
+                    var aleatorioX = Math.floor(Math.random() * maxX);
+                    var aleatorioY = Math.floor(Math.random() * maxY);
+
+                    botaosim.style.top = aleatorioY + "px";
+                    botaosim.style.left = aleatorioX + "px"; 
+                }
+
+            </script>
+
+            
+    </div>
+
+</body>
+</html>
